@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Dudley Institute of Digital Asset Security</title>
+
+<style>
+body {
+  margin: 0;
+  font-family: "Segoe UI", Arial, sans-serif;
+  background: #0a0f1a;
+  color: #e5e7eb;
+  line-height: 1.7;
+}
+
+/* NAV */
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background: #0f172a;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  border-bottom: 1px solid #1f2937;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+nav a {
+  color: #93c5fd;
+  margin: 0 10px;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+/* HERO */
+.hero {
+  height: 85vh;
+  background: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.hero::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: rgba(0,0,0,0.65);
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+}
+
+h1 { font-size: 46px; }
+
+.button {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 14px 24px;
+  background: #2563eb;
+  color: white;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.button:hover { background:#1d4ed8; }
+
+/* COUNTDOWN */
+.countdown {
+  font-size: 18px;
+  margin-top: 15px;
+  color: #60a5fa;
+}
+
+/* CONTAINER */
+.container {
+  max-width: 1150px;
+  margin: auto;
+  padding: 60px 20px;
+}
+
+.section { margin-bottom: 90px; }
+
+h2 {
+  color: #60a5fa;
+  border-left: 4px solid #2563eb;
+  padding-left: 10px;
+}
+
+.card {
+  background: #111827;
+  padding: 22px;
+  border-radius: 10px;
+  border: 1px solid #1f2937;
+  margin-top: 15px;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
+  gap: 20px;
+}
+
+img {
+  width: 100%;
+  border-radius: 10px;
+}
+
+/* FAQ */
+details {
+  background: #111827;
+  padding: 15px;
+  margin-bottom: 10px;
+  border-radius: 8px;
+  border: 1px solid #1f2937;
+}
+
+/* FOOTER */
+footer {
+  background: #0f172a;
+  text-align: center;
+  padding: 30px;
+  font-size: 12px;
+  opacity: 0.8;
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAV -->
+<div class="navbar">
+  <div class="logo">
+    <svg width="30" height="30" viewBox="0 0 24 24" fill="#60a5fa">
+      <path d="M12 2L3 6v6c0 5 3.4 9.4 9 10 5.6-.6 9-5 9-10V6l-9-4z"/>
+    </svg>
+    Dudley Institute of Digital Asset Security
+  </div>
+
+  <nav>
+    <a href="#about">About</a>
+    <a href="#value">Why Us</a>
+    <a href="#media">Media</a>
+    <a href="#faq">FAQ</a>
+    <a href="#event">Register</a>
+  </nav>
+</div>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-content">
+    <h1>Cyber Security Masterclass</h1>
+    <p>Protect. Detect. Defend Digital Assets.</p>
+
+    <div class="countdown">
+      Event Starts Soon — Limited Seats Available
+    </div>
+
+    <a class="button" href="https://www.eventbrite.com" target="_blank">
+      Register on Eventbrite
+    </a>
+
+    <br><br>
+
+    <a class="button" style="background:#1f2937;" href="#" download>
+      Download Syllabus (PDF)
+    </a>
+  </div>
+</div>
+
+<div class="container">
+
+<!-- ABOUT -->
+<section id="about" class="section">
+<h2>About the Institute</h2>
+
+<div class="card">
+<p>
+The Dudley Institute of Digital Asset Security is a cybersecurity education institution focused on digital protection,
+risk awareness, and applied cyber defense training.
+</p>
+
+<p>
+We specialize in translating complex cybersecurity threats into practical understanding for individuals and organizations.
+</p>
+</div>
+</section>
+
+<!-- WHY US -->
+<section id="value" class="section">
+<h2>Why This Training Matters</h2>
+
+<div class="card">
+<ul>
+<li>Cyber attacks are increasing globally every year</li>
+<li>Most breaches occur due to human error</li>
+<li>Businesses lack basic cyber awareness training</li>
+<li>This masterclass teaches real-world defensive thinking</li>
+<li>Focus on practical protection, not theory</li>
+</ul>
+</div>
+</section>
+
+<!-- MEDIA -->
+<section id="media" class="section">
+<h2>Cybersecurity Environment</h2>
+
+<div class="grid">
+<img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80">
+<img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80">
+<img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c?auto=format&fit=crop&w=800&q=80">
+</div>
+</section>
+
+<!-- VIDEO -->
+<section class="section">
+<h2>Training Preview</h2>
+
+<div class="card">
+<iframe width="100%" height="400"
+src="https://www.youtube.com/embed/6sZQY6Y1f8A"
+allowfullscreen></iframe>
+</div>
+</section>
+
+<!-- FAQ -->
+<section id="faq" class="section">
+<h2>Frequently Asked Questions</h2>
+
+<details><summary>Do I need experience?</summary><p>No.</p></details>
+<details><summary>Is this online?</summary><p>Yes.</p></details>
+<details><summary>Is it certified?</summary><p>No.</p></details>
+<details><summary>Who should attend?</summary><p>Everyone interested in cybersecurity.</p></details>
+<details><summary>How long is it?</summary><p>60–120 minutes.</p></details>
+<details><summary>Is it practical?</summary><p>Yes, real-world scenarios are covered.</p></details>
+<details><summary>Do I need tools?</summary><p>No.</p></details>
+<details><summary>Will there be recording?</summary><p>Yes if provided.</p></details>
+
+</section>
+
+<!-- EVENT -->
+<section id="event" class="section">
+<h2>Register for the Masterclass</h2>
+
+<div class="card">
+<p>
+Join a structured cybersecurity training designed to improve awareness and protection skills.
+</p>
+
+<a class="button" href="https://www.eventbrite.com" target="_blank">
+Secure Your Spot
+</a>
+
+<br><br>
+
+<!-- EVENTBRITE EMBED PLACEHOLDER -->
+<p style="opacity:0.7;">
+(Eventbrite registration widget can be embedded here once event is created)
+</p>
+
+</div>
+</section>
+
+</div>
+
+<footer>
+© 2026 Dudley Institute of Digital Asset Security. Educational training content only.
+</footer>
+
+</body>
+</html>
