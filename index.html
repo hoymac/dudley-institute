@@ -8,10 +8,10 @@
 <style>
 body {
   margin: 0;
-  font-family: "Segoe UI", Arial, sans-serif;
+  font-family: "Segoe UI", system-ui, -apple-system, Arial, sans-serif;
   background: #0a0f1a;
   color: #e5e7eb;
-  line-height: 1.7;
+  line-height: 1.6;
 }
 
 /* NAV */
@@ -19,11 +19,12 @@ body {
   position: sticky;
   top: 0;
   z-index: 999;
-  background: #0f172a;
+  background: rgba(15, 23, 42, 0.9);
+  backdrop-filter: blur(10px);
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 12px 20px;
+  padding: 14px 28px;
   border-bottom: 1px solid #1f2937;
 }
 
@@ -31,7 +32,7 @@ body {
   display: flex;
   align-items: center;
   gap: 10px;
-  font-weight: bold;
+  font-weight: 600;
   font-size: 14px;
 }
 
@@ -40,6 +41,10 @@ nav a {
   margin: 0 10px;
   text-decoration: none;
   font-size: 13px;
+}
+
+nav a:hover {
+  color: #ffffff;
 }
 
 /* HERO */
@@ -63,49 +68,68 @@ nav a {
 .hero-content {
   position: relative;
   z-index: 2;
+  max-width: 800px;
 }
 
-h1 { font-size: 46px; }
+h1 {
+  font-size: 52px;
+  margin-bottom: 10px;
+  letter-spacing: -1px;
+}
 
+p {
+  color: #cbd5e1;
+}
+
+/* BUTTONS */
 .button {
   display: inline-block;
   margin-top: 20px;
-  padding: 14px 24px;
+  padding: 14px 26px;
   background: #2563eb;
   color: white;
   text-decoration: none;
-  border-radius: 6px;
-  font-weight: bold;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: 0.2s ease;
 }
 
-.button:hover { background:#1d4ed8; }
+.button:hover {
+  background: #1d4ed8;
+  transform: translateY(-2px);
+}
 
 /* COUNTDOWN */
 .countdown {
-  font-size: 18px;
+  font-size: 16px;
   margin-top: 15px;
   color: #60a5fa;
 }
 
 /* CONTAINER */
 .container {
-  max-width: 1150px;
+  max-width: 1100px;
   margin: auto;
-  padding: 60px 20px;
+  padding: 70px 20px;
 }
 
-.section { margin-bottom: 90px; }
+.section {
+  margin-bottom: 80px;
+}
 
 h2 {
   color: #60a5fa;
+  font-size: 26px;
+  margin-bottom: 15px;
   border-left: 4px solid #2563eb;
-  padding-left: 10px;
+  padding-left: 12px;
 }
 
+/* CARDS */
 .card {
   background: #111827;
-  padding: 22px;
-  border-radius: 10px;
+  padding: 24px;
+  border-radius: 12px;
   border: 1px solid #1f2937;
   margin-top: 15px;
 }
@@ -114,30 +138,41 @@ h2 {
 .grid {
   display: grid;
   grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-  gap: 20px;
+  gap: 18px;
 }
 
 img {
   width: 100%;
-  border-radius: 10px;
+  border-radius: 12px;
 }
 
 /* FAQ */
 details {
   background: #111827;
-  padding: 15px;
+  padding: 16px;
   margin-bottom: 10px;
-  border-radius: 8px;
+  border-radius: 10px;
   border: 1px solid #1f2937;
+  cursor: pointer;
 }
 
 /* FOOTER */
 footer {
   background: #0f172a;
   text-align: center;
-  padding: 30px;
-  font-size: 12px;
-  opacity: 0.8;
+  padding: 40px 20px;
+  font-size: 13px;
+  border-top: 1px solid #1f2937;
+  color: #94a3b8;
+}
+
+footer a {
+  color: #60a5fa;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: white;
 }
 </style>
 </head>
@@ -189,29 +224,25 @@ footer {
 <!-- ABOUT -->
 <section id="about" class="section">
 <h2>About the Institute</h2>
-
 <div class="card">
 <p>
 The Dudley Institute of Digital Asset Security is a cybersecurity education institution focused on digital protection,
 risk awareness, and applied cyber defense training.
 </p>
-
 <p>
 We specialize in translating complex cybersecurity threats into practical understanding for individuals and organizations.
 </p>
 </div>
 </section>
 
-<!-- WHY US -->
+<!-- WHY -->
 <section id="value" class="section">
 <h2>Why This Training Matters</h2>
-
 <div class="card">
 <ul>
 <li>Cyber attacks are increasing globally every year</li>
 <li>Most breaches occur due to human error</li>
 <li>Businesses lack basic cyber awareness training</li>
-<li>This masterclass teaches real-world defensive thinking</li>
 <li>Focus on practical protection, not theory</li>
 </ul>
 </div>
@@ -220,7 +251,6 @@ We specialize in translating complex cybersecurity threats into practical unders
 <!-- MEDIA -->
 <section id="media" class="section">
 <h2>Cybersecurity Environment</h2>
-
 <div class="grid">
 <img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5?auto=format&fit=crop&w=800&q=80">
 <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?auto=format&fit=crop&w=800&q=80">
@@ -231,7 +261,6 @@ We specialize in translating complex cybersecurity threats into practical unders
 <!-- VIDEO -->
 <section class="section">
 <h2>Training Preview</h2>
-
 <div class="card">
 <iframe width="100%" height="400"
 src="https://www.youtube.com/embed/6sZQY6Y1f8A"
@@ -241,46 +270,51 @@ allowfullscreen></iframe>
 
 <!-- FAQ -->
 <section id="faq" class="section">
-<h2>Frequently Asked Questions</h2>
-
+<h2>FAQ</h2>
+<div class="card">
 <details><summary>Do I need experience?</summary><p>No.</p></details>
 <details><summary>Is this online?</summary><p>Yes.</p></details>
 <details><summary>Is it certified?</summary><p>No.</p></details>
 <details><summary>Who should attend?</summary><p>Everyone interested in cybersecurity.</p></details>
 <details><summary>How long is it?</summary><p>60–120 minutes.</p></details>
-<details><summary>Is it practical?</summary><p>Yes, real-world scenarios are covered.</p></details>
-<details><summary>Do I need tools?</summary><p>No.</p></details>
-<details><summary>Will there be recording?</summary><p>Yes if provided.</p></details>
-
+</div>
 </section>
 
 <!-- EVENT -->
 <section id="event" class="section">
-<h2>Register for the Masterclass</h2>
-
+<h2>Register</h2>
 <div class="card">
-<p>
-Join a structured cybersecurity training designed to improve awareness and protection skills.
-</p>
+<p>Join structured cybersecurity training designed for real-world awareness.</p>
 
 <a class="button" href="https://www.eventbrite.com" target="_blank">
 Secure Your Spot
 </a>
-
-<br><br>
-
-<!-- EVENTBRITE EMBED PLACEHOLDER -->
-<p style="opacity:0.7;">
-(Eventbrite registration widget can be embedded here once event is created)
-</p>
-
 </div>
 </section>
 
 </div>
 
+<!-- FOOTER -->
 <footer>
-© 2026 Dudley Institute of Digital Asset Security. Educational training content only.
+  <p>© 2026 Dudley Institute of Digital Asset Security</p>
+
+  <p>
+    Email:
+    <a href="mailto:Dudley@dudleyinstituteofdigitalassetsecurity.com">
+      Dudley@dudleyinstituteofdigitalassetsecurity.com
+    </a>
+  </p>
+
+  <p>
+    Phone:
+    <a href="tel:+18197435741">
+      819-743-5741
+    </a>
+  </p>
+
+  <p style="opacity:0.6; margin-top:10px;">
+    Educational cybersecurity training content only.
+  </p>
 </footer>
 
 </body>
