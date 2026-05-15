@@ -29,9 +29,6 @@ body {
 }
 
 .logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
   font-weight: 600;
   font-size: 14px;
 }
@@ -50,12 +47,12 @@ nav a:hover {
 /* HERO */
 .hero {
   height: 85vh;
-  background: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1600&q=80') center/cover no-repeat;
   display: flex;
   align-items: center;
   justify-content: center;
   text-align: center;
   position: relative;
+  background: url('https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&w=1600&q=80') center/cover;
 }
 
 .hero::after {
@@ -68,7 +65,6 @@ nav a:hover {
 .hero-content {
   position: relative;
   z-index: 2;
-  max-width: 800px;
 }
 
 h1 {
@@ -76,11 +72,6 @@ h1 {
   margin-bottom: 10px;
 }
 
-p {
-  color: #cbd5e1;
-}
-
-/* BUTTON */
 .button {
   display: inline-block;
   margin-top: 20px;
@@ -109,7 +100,6 @@ p {
 
 h2 {
   color: #60a5fa;
-  font-size: 26px;
   border-left: 4px solid #2563eb;
   padding-left: 12px;
 }
@@ -122,25 +112,21 @@ h2 {
   margin-top: 15px;
 }
 
-/* GRID */
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(280px,1fr));
-  gap: 18px;
-}
-
-img {
-  width: 100%;
-  border-radius: 12px;
-}
-
-/* FAQ */
+/* DETAILS */
 details {
   background: #111827;
   padding: 16px;
   margin-bottom: 10px;
   border-radius: 10px;
   border: 1px solid #1f2937;
+}
+
+/* VIDEO */
+iframe {
+  width: 100%;
+  height: 420px;
+  border-radius: 12px;
+  border: none;
 }
 
 /* FOOTER */
@@ -152,11 +138,6 @@ footer {
   border-top: 1px solid #1f2937;
   color: #94a3b8;
 }
-
-footer a {
-  color: #60a5fa;
-  text-decoration: none;
-}
 </style>
 </head>
 
@@ -165,18 +146,15 @@ footer a {
 <!-- NAV -->
 <div class="navbar">
   <div class="logo">
-    <svg width="30" height="30" viewBox="0 0 24 24" fill="#60a5fa">
-      <path d="M12 2L3 6v6c0 5 3.4 9.4 9 10 5.6-.6 9-5 9-10V6l-9-4z"/>
-    </svg>
     Dudley Institute of Digital Asset Security
   </div>
 
   <nav>
     <a href="#about">About</a>
     <a href="#value">Why Us</a>
-    <a href="#media">Media</a>
+    <a href="#video">Training</a>
     <a href="#faq">FAQ</a>
-    <a href="#event">Register</a>
+    <a href="#contact">Contact</a>
   </nav>
 </div>
 
@@ -187,7 +165,7 @@ footer a {
     <p>Protect. Detect. Defend Digital Assets.</p>
 
     <a class="button" href="https://www.eventbrite.com" target="_blank">
-      Register on Eventbrite
+      Register Now
     </a>
   </div>
 </div>
@@ -196,52 +174,120 @@ footer a {
 
 <!-- ABOUT -->
 <section id="about" class="section">
-<h2>About</h2>
+<h2>About Us</h2>
+
 <div class="card">
-<p>Cybersecurity education focused on digital protection and awareness.</p>
+<p>
+The Dudley Institute of Digital Asset Security is an independent cybersecurity education initiative focused on building practical awareness of modern digital threats.
+</p>
+
+<p>
+Founded by Thomas Dudley, the institute delivers training designed to improve cybersecurity understanding, awareness, and real-world defensive thinking.
+</p>
+
+<p>
+We focus on simplifying complex cyber risks such as phishing, identity theft, and data breaches into practical knowledge.
+</p>
 </div>
 </section>
 
-<!-- WHY -->
+<!-- WHY US -->
 <section id="value" class="section">
 <h2>Why Us</h2>
+
 <div class="card">
-<ul>
-<li>Real-world cybersecurity training</li>
-<li>Focus on practical defense</li>
-<li>Awareness-based learning</li>
-</ul>
+<p>
+The Dudley Institute of Digital Asset Security focuses on practical cybersecurity education designed for real-world use.
+Unlike traditional theory-heavy training, our approach prioritizes clear understanding of how cyber threats actually occur
+and how individuals can respond effectively.
+</p>
+
+<p>
+Cybersecurity is no longer optional. Every individual and organization connected to the internet is exposed to risks such as
+phishing attacks, identity theft, data breaches, ransomware, and social engineering scams.
+</p>
+
+<p>
+We break down complex technical concepts into simple, actionable knowledge so that learners can apply it immediately in real life.
+</p>
 </div>
 </section>
 
-<!-- MEDIA -->
-<section id="media" class="section">
-<h2>Media</h2>
-<div class="grid">
-<img src="https://images.unsplash.com/photo-1526374965328-7f61d4dc18c5">
-<img src="https://images.unsplash.com/photo-1563986768609-322da13575f3">
-<img src="https://images.unsplash.com/photo-1555949963-aa79dcee981c">
+<!-- VIDEO (FIXED) -->
+<section id="video" class="section">
+<h2>Training Preview</h2>
+
+<div class="card">
+<p>Watch cybersecurity awareness training:</p>
+
+<iframe 
+src="https://www.youtube.com/embed/9C5a0FzH1b0"
+allowfullscreen>
+</iframe>
+
 </div>
 </section>
 
 <!-- FAQ -->
 <section id="faq" class="section">
-<h2>FAQ</h2>
+<h2>Frequently Asked Questions</h2>
+
 <div class="card">
-<details><summary>Do I need experience?</summary><p>No.</p></details>
-<details><summary>Is it online?</summary><p>Yes.</p></details>
+
+<details>
+<summary>Do I need prior experience?</summary>
+<p>No. Everything is explained from the ground up in a simple, practical way.</p>
+</details>
+
+<details>
+<summary>What will I learn?</summary>
+<p>You will learn how cyber attacks happen, how to recognize them, and how to protect yourself and your data.</p>
+</details>
+
+<details>
+<summary>Is this a technical course?</summary>
+<p>No coding is required. The focus is awareness and real-world defense strategies.</p>
+</details>
+
+<details>
+<summary>Who is this for?</summary>
+<p>Anyone who uses the internet: students, employees, business owners, and everyday users.</p>
+</details>
+
+<details>
+<summary>Why is this important?</summary>
+<p>Cyber threats are increasing globally, and most attacks happen due to human error, not technology failure.</p>
+</details>
+
+<details>
+<summary>How long does it take?</summary>
+<p>Typically 60–360 minutes depending on the learner’s pace.</p>
+</details>
+
+<details>
+<summary>Is certification provided?</summary>
+<p>No formal certification is issued. The focus is education and awareness.</p>
+</details>
+
+</div>
+</section>
+
+<!-- CONTACT -->
+<section id="contact" class="section">
+<h2>Contact</h2>
+
+<div class="card">
+<p>Email: Dudley@dudleyinstituteofdigitalassetsecurity.com</p>
+<p>Phone: 343-961-3826</p>
 </div>
 </section>
 
 </div>
 
-<!-- FOOTER (FIXED CONTACT INFO) -->
+<!-- FOOTER -->
 <footer>
   <p>© 2026 Dudley Institute of Digital Asset Security</p>
-
-  <p>Email: Dudley@dudleyinstituteofdigitalassetsecurity.com</p>
-
-  <p>Phone: 819-743-5741</p>
+  <p>Email: Dudley@dudleyinstituteofdigitalassetsecurity.com | Phone: 343-961-3826</p>
 </footer>
 
 </body>
